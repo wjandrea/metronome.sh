@@ -113,6 +113,7 @@ while true; do
             # Unaccentuated beat
             canberra-gtk-play --id="$tock" &
         fi
-        sleep "$beat_time"
+        # Wait before next beat. Will exit if beat time is invalid.
+        sleep "$beat_time" || exit
     done
 done
