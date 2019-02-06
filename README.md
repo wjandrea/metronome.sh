@@ -4,7 +4,7 @@ Originally posted on Ask Ubuntu as an answer to [Where can I find a metronome fo
 
 ## Usage
 
-    metronome.sh [beats per minute] [beats per measure]
+    metronome.sh [-h] [beats per minute] [beats per measure]
 
 ## Info
 

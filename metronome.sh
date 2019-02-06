@@ -1,6 +1,5 @@
 #!/bin/bash
-# metronome.sh
-# Is a metronome.
+# metronome.sh - Is a metronome.
 # See _usage and _help for more info.
 
 # Accentuated and unaccentuated sound IDs, respectively.
@@ -34,7 +33,8 @@ Is a metronome.
 Originally posted on Ask Ubuntu: https://askubuntu.com/a/815010/301745
 
 Options:
-    -h      Show this help message and exit.
+    -h, --help
+            Show this help message and exit.
 
 Arguments:
     BPM     Beats per minute. Default 120. Valid range: [$bpm_min, $bpm_max]
