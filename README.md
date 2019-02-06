@@ -13,6 +13,7 @@ Originally posted on Ask Ubuntu as an answer to [Where can I find a metronome fo
 - The first beat is accentuated.
 - You can replace the sound IDs if you want. I just picked ones that sounded good from the Ubuntu 14.04 sound bank. A full list of IDs (names) can be found in the [Sound Naming Specification](http://0pointer.de/public/sound-naming-spec.html#names) of the [freedesktop.org Sound Theme Spec](https://www.freedesktop.org/wiki/Specifications/sound-theme-spec/)
 - On my system, it's accurate to within about 1.5ms per beat, which is not noticeable. (Though I can't remember now how I tested this.)
+- `metronome-core.sh` is just the core stuff - no argument checking, help text, or anything fancy, except checking if `sleep` succeeds. It will bug out if the BPM is too high, for example.
 
 ## For example
 
