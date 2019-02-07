@@ -102,7 +102,10 @@ fi
 beat_time="$(bc -l <<< "scale=5; 60/$bpm-0.004")"
 
 echo "Metronome playing $bpm BPM, $msr beats per measure"
-echo -n "Press Ctrl+C to quit."
+echo "Press Ctrl+C to quit."
+
+# Exit normally on SIGINT (Ctrl+C).
+trap 'echo; exit 0' SIGINT
 
 while true; do
     for ((i=1; i<=$msr; i++)); do
