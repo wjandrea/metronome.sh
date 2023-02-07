@@ -3,8 +3,12 @@
 # See _usage and _help for more info.
 
 # Accentuated and unaccentuated sound IDs, respectively.
-tick='dialog-information'
-tock='button-toggle-on'
+tick_id='dialog-information'
+tock_id='button-toggle-on'
+
+sound_files_dir='/usr/share/sounds/ubuntu/stereo'
+tick="$sound_files_dir/$tick_id.ogg"
+tock="$sound_files_dir/$tock_id.ogg"
 
 # Default BPM and beats per measure.
 bpm=120
@@ -111,10 +115,10 @@ while true; do
     for ((i=1; i<=$msr; i++)); do
         if [[ $i -eq 1 ]]; then
             # Accentuated beat.
-            canberra-gtk-play --id="$tick" &
+            canberra-gtk-play --file="$tick" &
         else
             # Unaccentuated beat
-            canberra-gtk-play --id="$tock" &
+            canberra-gtk-play --file="$tock" &
         fi
         # Wait before next beat. Will exit if beat time is invalid.
         sleep "$beat_time" || exit
